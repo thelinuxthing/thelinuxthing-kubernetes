@@ -24,9 +24,9 @@ Vagrant.configure("2") do |config|
         echo 172.16.1.100 master.example.com master >> /etc/hosts
         echo 172.16.1.201 node1.example.com node1 >> /etc/hosts
         echo 172.16.1.202 node2.example.com node2 >> /etc/hosts
-        echo root:redhat | chpasswd
+        echo root:redhat | sudo chpasswd
         sed -i '/PasswordAuthentication/s/no/yes/' /etc/ssh/sshd_config
-        sed -i '/PermitRootLogin/s/prohibit-password/yes/' /etc/ssh/sshd_config
+        sed -i '/^#PermitRootLogin/s/#//' /etc/ssh/sshd_config
         systemctl restart sshd
         SHELL
     end
