@@ -2,24 +2,24 @@
 
 This vagrant file deploys 3 machines
 -
-  - 3 CentOS-7 machines
-    - manager
-    - worker1
-    - worker2
+  - 3 Ubuntu 18.04 machines
+    - master
+    - node1
+    - node2
     
 
-manager node
+master node
    
-    - manager.example.com 
+    - master.example.com 
       IP: 172.16.1.100
-      OS: Centos 7
+      OS: Ubuntu 18.04
 
-worker nodes
+slave nodes
 
-    - worker1.example.com
+    - node1.example.com
       172.16.1.201
-      OS: Centos 7
+      OS: Ubuntu 18.04
 
-    - worker2.example.com
+    - node2.example.com
       172.16.1.202
-      OS: Centos 7
+      OS: Ubuntu 18.04
